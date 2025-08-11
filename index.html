@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="pageTitle">RH Agencia Creativa - Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#inicio" class="logo">RH<span>&nbsp;.&nbsp;</span>&nbsp;AGENCIA</a>
+        <div class="nav-wrapper">
+             <nav class="main-nav">
+                <a href="#nosotros" data-lang-key="navNosotros">Nosotros</a>
+                <a href="#servicios" data-lang-key="navServicios">Servicios</a>
+                <a href="#portafolio" data-lang-key="navPortafolio">Portafolio</a>
+                <a href="#contacto" data-lang-key="navContacto">Contacto</a>
+                <a href="#login" id="nav-login-link" data-lang-key="navPortal">Portal Clientes</a>
+            </nav>
+            <button class="theme-switcher" id="theme-switcher" aria-label="Cambiar tema">☀️</button>
+            <button class="lang-switcher" id="lang-switcher" data-lang="en">EN</button>
+            <div class="nav-toggle" id="nav-toggle">☰</div>
+        </div>
+    </header>
+    
+    <div class="mobile-nav-menu" id="mobile-nav-menu">
+        <div class="close-nav" id="close-nav">&times;</div>
+        <a href="#nosotros" data-lang-key="navNosotros">Nosotros</a>
+        <a href="#servicios" data-lang-key="navServicios">Servicios</a>
+        <a href="#portafolio" data-lang-key="navPortafolio">Portafolio</a>
+        <a href="#contacto" data-lang-key="navContacto">Contacto</a>
+        <a href="#login" id="mobile-nav-login-link" data-lang-key="navPortal">Portal Clientes</a>
+    </div>
+
+    <main>
+        <section id="inicio">
+            <div class="container">
+                <h1 class="fade-in" data-cms="hero-title" data-lang-key="heroTitle">Estrategia y Creatividad que Generan Resultados.</h1>
+                <p class="fade-in" data-cms="hero-subtitle" data-lang-key="heroSubtitle">Combinamos estrategia que funciona con producción visual que impacta, creando proyectos que no solo se ven bien, sino que logran lo que te propones.</p>
+                <a href="#portafolio" class="cta-button fade-in" data-lang-key="heroCTA">Ver Proyectos</a>
+            </div>
+        </section>
+
+        <section id="nosotros">
+            <div class="container">
+                <h2 class="fade-in" data-lang-key="aboutHeading">Nosotros</h2>
+                <div class="grid">
+                    <div class="text-content fade-in">
+                        <h3 data-cms="about-title" data-lang-key="aboutSubheading">Ideas Claras. Trabajo Honesto.</h3>
+                        <p data-cms="about-p1" data-lang-key="aboutP1">Somos una agencia digital que realmente entiende lo que necesitas. No complicamos las cosas, las hacemos funcionar. Creemos en la colaboración codo a codo, porque nadie conoce tu negocio mejor que tú.</p>
+                        <p data-cms="about-p2" data-lang-key="aboutP2">Nuestro proceso es simple: te escuchamos, armamos un plan claro y lo ejecutamos juntos para obtener resultados reales y medibles.</p>
+                    </div>
+                    <div class="image-placeholder fade-in" data-cms="about-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="container">
+                <h2 class="fade-in" data-lang-key="servicesHeading">Servicios</h2>
+                <ul class="service-list" id="service-list-container">
+                    <!-- Contenido estático como fallback, será reemplazado por el JS -->
+                    <li class="service-item fade-in"><h3>Estrategia y Comunicación</h3><span>01</span></li>
+                    <li class="service-item fade-in"><h3>Creación de Contenido</h3><span>02</span></li>
+                    <li class="service-item fade-in"><h3>Gestión de Redes Sociales</h3><span>03</span></li>
+                    <li class="service-item fade-in"><h3>Diseño Web que Convierte</h3><span>04</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portafolio">
+            <div class="container">
+                <h2 class="fade-in" data-lang-key="portfolioHeading">Portafolio</h2>
+                <div class="portfolio-grid" id="portfolio-grid-container">
+                     <!-- Contenido estático como fallback, será reemplazado por el JS -->
+                    <a href="#" class="portfolio-item fade-in">
+                        <img src="https://placehold.co/600x600/1a1a1a/eaeaea?text=Proyecto+1" alt="Proyecto 1">
+                        <div class="portfolio-overlay"><h3>Cliente A / Branding</h3></div>
+                    </a>
+                    <a href="#" class="portfolio-item fade-in">
+                        <img src="https://placehold.co/600x600/1a1a1a/eaeaea?text=Proyecto+2" alt="Proyecto 2">
+                        <div class="portfolio-overlay"><h3>Cliente B / Web</h3></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="login" class="full-page-section">
+            <div class="container">
+                <h2 class="fade-in" data-lang-key="loginHeading">Acceso Clientes</h2>
+                <div class="login-box">
+                    <p data-lang-key="loginSubheading">Ingresa tus credenciales para ver el estado de tus proyectos.</p>
+                    <form id="login-form">
+                        <input type="email" id="login-email" data-lang-key="loginEmailPlaceholder" placeholder="Correo Electrónico" required>
+                        <input type="password" id="login-password" data-lang-key="loginPasswordPlaceholder" placeholder="Contraseña" required>
+                        <button type="submit" class="cta-button" data-lang-key="loginButton">Ingresar</button>
+                    </form>
+                    <p id="login-error" class="error-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="full-page-section" style="display: none;">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2 class="fade-in" data-lang-key="dashboardHeading">Mis Proyectos</h2>
+                    <button id="logout-button" class="cta-button secondary" data-lang-key="dashboardLogout">Cerrar Sesión</button>
+                </div>
+                <div id="project-status-container"></div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="container">
+                <h2 class="fade-in" data-lang-key="contactHeading">¿Hacemos algo bueno juntos?</h2>
+                <div class="grid">
+                    <div class="contact-info fade-in">
+                        <h3 data-lang-key="contactSubheading">Hablemos</h3>
+                        <p data-cms="contact-text" data-lang-key="contactText">Estamos listos para escuchar tu idea y convertirla en un proyecto exitoso. Escríbenos o llámanos.</p>
+                        <p data-cms="contact-details"><strong>Email:</strong><br>rueda@rhagencia.co<br>herrera@rhagencia.co<br>crodriguezuribe@rhagencia.co</p>
+                    </div>
+                    <form class="contact-form fade-in" action="https://formspree.io/f/{your_form_id}" method="POST">
+                        <input type="text" name="name" data-lang-key="contactNamePlaceholder" placeholder="Tu Nombre" required>
+                        <input type="email" name="email" data-lang-key="contactEmailPlaceholder" placeholder="Tu Correo Electrónico" required>
+                        <textarea name="message" rows="5" data-lang-key="contactMessagePlaceholder" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                        <button type="submit" class="cta-button" data-lang-key="contactButton">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p data-lang-key="footerText">&copy; 2025 RH Agencia Creativa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
